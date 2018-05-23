@@ -11,10 +11,8 @@ driver.manage().window().maximize();
 driver.findElement(By.name('q')).sendKeys('Digitro Tecnologia');
 driver.findElement(By.name('q')).sendKeys(webdriver.Key.ENTER);
 driver.wait(webdriver.until.elementLocated({xpath:'//h3/a[1]'}));
-driver.findElement(By.xpath('//h3/a[1]')).then(function(el){
-    console.log("Site da Digitro encontrado. \n", el);
-});
-driver.findElement(By.xpath('//h3/a[1]')).click();
+driver.findElement(By.xpath('//h3/a[1]')).click().then(function(){
+    console.log("Site da Digitro localizado"));
 driver.findElement(By.name('search_show')).click();
 driver.findElement(By.name('search_show')).sendKeys(webdriver.Key.ARROW_DOWN);
 driver.findElement(By.className('button_busca')).click();

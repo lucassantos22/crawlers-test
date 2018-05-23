@@ -12,7 +12,7 @@ driver.findElement(By.name('q')).sendKeys('Digitro Tecnologia');
 driver.findElement(By.name('q')).sendKeys(webdriver.Key.ENTER);
 driver.wait(webdriver.until.elementLocated({xpath:'//h3/a[1]'}));
 driver.findElement(By.xpath('//h3/a[1]')).then(function(el){
-    console.log("Site da Digitro encontrado. \n", el);
+    console.log("Site da Digitro encontrado. ", el);
 });
 driver.findElement(By.xpath('//h3/a[1]')).click();
 driver.findElement(By.name('search_show')).click();
