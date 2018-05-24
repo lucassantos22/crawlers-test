@@ -10,9 +10,11 @@ driver.manage().window().maximize();
 driver.findElement(By.name('q')).then(el=>{
     el.sendKeys('Digitro Tecnologia');
     el.sendKeys(webdriver.Key.ENTER);
-});
-driver.wait(until.elementLocated({xpath:"//h3[@class='r']/a[@href='http://www.digitro.com/']"}),5000);
-driver.findElement(By.xpath("//h3[@class='r']/a[@href='http://www.digitro.com/']")).then(el=>{ 
+})
+sendKeys('Digitro Tecnologia');
+driver.findElement(By.name('q')).sendKeys(webdriver.Key.ENTER);
+driver.wait(until.elementLocated({xpath:'//h3/a[1]'}),5000);
+driver.findElement(By.xpath('//h3/a[1]')).then(el=>{ 
     console.log("Site da Digitro encontrado. \n", el);
 });
 driver.findElement(By.xpath("//h3[@class='r']/a[@href='http://www.digitro.com/']")).click();
