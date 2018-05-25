@@ -44,26 +44,7 @@ driver.getTitle().then(title=>{
     console.log("Título da página: ", title);
 })
 
-//Recuperando dados dos inputs.
-driver.findElements(By.xpath("//input[contains(@id,'66') and @type='text']")).then(dados=>{
-    for(const dado of dados){
-        dado.getAttribute('value').then(data=>{
-            console.log(data);
-        })
-    }
-});
-
-//Recuperando dados dos selects.
-driver.findElements(By.xpath("//select[starts-with(@name,'h')]")).then(dados=>{
-    for(const dado of dados){
-        dado.getAttribute('value').then(data=>{
-            console.log(data);
-        })
-    }
-});
-
-//Recuperando dados da textarea.
-driver.findElements(By.xpath("//textarea[@class='mensagem']")).then(dados=>{
+driver.findElements(By.xpath("//input[contains(@id,'66')]")).then(dados=>{
     for(const dado of dados){
         dado.getAttribute('value').then(data=>{
             console.log(data);

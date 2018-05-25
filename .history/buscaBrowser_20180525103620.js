@@ -53,7 +53,7 @@ driver.findElements(By.xpath("//input[contains(@id,'66') and @type='text']")).th
     }
 });
 
-//Recuperando dados dos selects.
+//Recuperando dados dos selects
 driver.findElements(By.xpath("//select[starts-with(@name,'h')]")).then(dados=>{
     for(const dado of dados){
         dado.getAttribute('value').then(data=>{

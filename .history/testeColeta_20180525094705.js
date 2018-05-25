@@ -27,8 +27,8 @@ driver.getTitle().then(title=>{
 })
 
 driver.navigate().refresh();
-// driver.navigate().back();
-// driver.navigate().forward();
-// driver.navigate().to('http://www.digitro.com/pt/');
+driver.navigate().refresh();
+driver.navigate().refresh();
+
 
 // driver.quite();

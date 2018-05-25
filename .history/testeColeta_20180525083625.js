@@ -16,7 +16,7 @@ driver.findElement(By.name('q')).then(el=>{
 driver.findElements(By.xpath('//h3/a')).then(titles=>{
     for(const title of titles){ 
         title.getText().then(Result=>{
-            console.log(Result);
+            console.log(Result + "\n");
         })
     }
 });
@@ -26,9 +26,8 @@ driver.getTitle().then(title=>{
     console.log(title);
 })
 
-driver.navigate().refresh();
-// driver.navigate().back();
-// driver.navigate().forward();
-// driver.navigate().to('http://www.digitro.com/pt/');
+driver.getWindowHandle().then(title=>{
+    console.log(title);
+})
 
 // driver.quite();

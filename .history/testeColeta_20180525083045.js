@@ -22,13 +22,7 @@ driver.findElements(By.xpath('//h3/a')).then(titles=>{
 });
 
 driver.getTitle().then(title=>{
-    console.log("Título da página: ");
     console.log(title);
 })
 
-driver.navigate().refresh();
-// driver.navigate().back();
-// driver.navigate().forward();
-// driver.navigate().to('http://www.digitro.com/pt/');
-
-// driver.quite();
+driver.quite();

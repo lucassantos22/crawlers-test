@@ -5,8 +5,7 @@ const webdriver = require('selenium-webdriver'),
 const driver = new webdriver.Builder().forBrowser('chrome').build();
 driver.get('https://www.google.com.br/');
 
-// driver.manage().deleteAllCookies();
-driver.manage().window().maximize(); 
+driver.manage().window().maximize();
 
 driver.findElement(By.name('q')).then(el=>{
     el.sendKeys('Digitro Tecnologia');
@@ -41,34 +40,7 @@ driver.findElement(By.xpath("//select[@class='estado']")).then(el=>{
 });
 
 driver.getTitle().then(title=>{
-    console.log("Título da página: ", title);
+    console.log(title);
 })
 
-//Recuperando dados dos inputs.
-driver.findElements(By.xpath("//input[contains(@id,'66') and @type='text']")).then(dados=>{
-    for(const dado of dados){
-        dado.getAttribute('value').then(data=>{
-            console.log(data);
-        })
-    }
-});
-
-//Recuperando dados dos selects.
-driver.findElements(By.xpath("//select[starts-with(@name,'h')]")).then(dados=>{
-    for(const dado of dados){
-        dado.getAttribute('value').then(data=>{
-            console.log(data);
-        })
-    }
-});
-
-//Recuperando dados da textarea.
-driver.findElements(By.xpath("//textarea[@class='mensagem']")).then(dados=>{
-    for(const dado of dados){
-        dado.getAttribute('value').then(data=>{
-            console.log(data);
-        })
-    }
-});
-
-driver.quit();
+// driver.quit();

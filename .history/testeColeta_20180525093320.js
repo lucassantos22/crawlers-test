@@ -26,9 +26,8 @@ driver.getTitle().then(title=>{
     console.log(title);
 })
 
-driver.navigate().refresh();
-// driver.navigate().back();
-// driver.navigate().forward();
-// driver.navigate().to('http://www.digitro.com/pt/');
+driver.takeScreenshot().then(screenshot=>{
+
+});
 
 // driver.quite();
